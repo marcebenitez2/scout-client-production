@@ -21,7 +21,7 @@ function Navbar() {
     localStorage.removeItem("idUsuario");
     sessionStorage.removeItem("emailUsuario");
     sessionStorage.removeItem("idUsuario");
-    navigate("/login");
+    navigate("/");
   };
 
   return (
