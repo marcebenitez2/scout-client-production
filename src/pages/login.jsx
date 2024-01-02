@@ -59,7 +59,7 @@ function Login() {
         <div className="flex flex-col w-full gap-2">
           <div className="flex flex-col w-full">
             <label className="text-white text-xl font-semibold">
-              Nombre de usuario:
+             Correo electronico:
             </label>
             <input
               className="h-10 dark:bg-custon-black dark:text-white px-4 font-semibold"
