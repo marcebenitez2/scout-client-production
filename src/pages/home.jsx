@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <main className="w-screen h-screen">
+    <main className="w-screen h-screen overflow-hidden">
       <InfoNav />
       <section
         className="w-full h-full bg-cover bg-center bg-no-repeat"

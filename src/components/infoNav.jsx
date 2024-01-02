@@ -5,7 +5,7 @@ import { ImHome } from "react-icons/im";
 
 function InfoNav() {
   return (
-    <nav className="w-full h-12 flex fixed justify-between px-10 items-center bg-red-600 text-white font-semibold smn:px-1 z-50">
+    <nav className="w-full h-12 flex fixed justify-between px-10 items-center bg-red-600 text-white font-semibold smn:px-3 z-50 ">
       <div>
         <Link to={"/"}>
           <ImHome size={30} />
