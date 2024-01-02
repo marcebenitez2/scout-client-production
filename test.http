@@ -1,0 +1,9 @@
+####
+
+POST https://php-scout.000webhostapp.com/login.php
+Content-Type: "application/json"
+
+{
+    usuario:"marce",
+    contra:"123"
+}

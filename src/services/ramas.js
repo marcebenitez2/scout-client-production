@@ -1,0 +1,34 @@
+export const ramas = [
+    {
+        id:1,
+        nombre:'Todos'
+    },
+    {
+        id:2,
+        nombre:'Castores'
+    },
+    {
+        id:3,
+        nombre:'Manada'
+    },
+    {
+        id:4,
+        nombre:'Haditas'
+    },
+    {
+        id:5,
+        nombre:'Scout'
+    },
+    {
+        id:6,
+        nombre:'Raider'
+    },
+    {
+        id:7,
+        nombre:'Rover'
+    },
+    {
+        id:8,
+        nombre:'Cocina'
+    },
+]
