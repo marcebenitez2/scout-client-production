@@ -34,7 +34,7 @@ function ModalAgregarArchivo({ isOpen, toClose }) {
           archivo: url,
         };
 
-        postBD(item, "http://localhost:5000/plans");
+        postBD(item, "https://scout-server-production-dev-dspd.3.us-1.fl0.io/plans");
         toClose(false);
         window.location.reload();
       })
@@ -45,7 +45,7 @@ function ModalAgregarArchivo({ isOpen, toClose }) {
 
   const [eventos, setEventos] = useState(null);
   useEffect(() => {
-    fetchBD(setEventos, "http://localhost:5000/calendary");
+    fetchBD(setEventos, "https://scout-server-production-dev-dspd.3.us-1.fl0.io/calendary");
   }, []);
 
   return (

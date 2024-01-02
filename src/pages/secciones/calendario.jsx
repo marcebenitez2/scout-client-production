@@ -25,7 +25,7 @@ function Calendario() {
   }
 
   useEffect(() => {
-    fetchBD(setEventos, "http://localhost:5000/calendary");
+    fetchBD(setEventos, "https://scout-server-production-dev-dspd.3.us-1.fl0.io/calendary");
   }, []);
 
 

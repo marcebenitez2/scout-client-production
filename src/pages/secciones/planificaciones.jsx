@@ -11,7 +11,7 @@ function Planificaciones() {
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);
 
   useEffect(() => {
-    fetchBD(setArchivos, "http://localhost:5000/plans");
+    fetchBD(setArchivos, "https://scout-server-production-dev-dspd.3.us-1.fl0.io/plans");
   }, []);
 
 

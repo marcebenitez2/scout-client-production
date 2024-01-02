@@ -39,7 +39,7 @@ function Formulario() {
       mensaje: mensajeFormulario,
     };
   
-    postBD(data, "http://localhost:5000/notifications");
+    postBD(data, "https://scout-server-production-dev-dspd.3.us-1.fl0.io/notifications");
     console.log(data);
     // window.location.reload();
   };
