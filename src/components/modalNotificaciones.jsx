@@ -3,7 +3,7 @@ import { updateBD } from "../services/updateBD";
 
 function ModalNotificaciones({ isOpen, toClose, seleccionada, texto }) {
   const enviarCambios = () => {
-    updateBD(`http://localhost:5000/notifications/${seleccionada.id}`);
+    updateBD(`https://scout-server-production-dev-dspd.3.us-1.fl0.io/notifications/${seleccionada.id}`);
     window.location.reload();
   };
 

@@ -106,13 +106,13 @@ function ModalBeneficiarios({ isOpen, toClose, seleccionada, beneficiarios }) {
 
     if (beneficiario.id) {
       updateBD(
-        `http://localhost:5000/beneficiaries/${beneficiario.id}`,
+        `https://scout-server-production-dev-dspd.3.us-1.fl0.io/beneficiaries/${beneficiario.id}`,
         beneficiario
       );
       toClose(false);
       window.location.reload();
     } else {
-      postBD(beneficiario, "http://localhost:5000/beneficiaries");
+      postBD(beneficiario, "https://scout-server-production-dev-dspd.3.us-1.fl0.io/beneficiaries");
       toClose(false);
       window.location.reload();
     }

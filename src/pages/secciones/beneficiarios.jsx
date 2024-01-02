@@ -12,7 +12,7 @@ function Beneficiarios() {
   const [seleccionada, setSeleccionada] = useState(null);
 
   useEffect(() => {
-    fetchBD(setBeneficiarios, "http://localhost:5000/beneficiaries");
+    fetchBD(setBeneficiarios, "https://scout-server-production-dev-dspd.3.us-1.fl0.io/beneficiaries");
   }, []);
 
   console.log(beneficiarios);
