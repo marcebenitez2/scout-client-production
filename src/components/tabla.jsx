@@ -102,7 +102,7 @@ function Tabla({ beneficiarios, setModalOpen, setSeleccionada }) {
           </thead>
           <tbody className="w-full h-full">
             {beneficiariosCopia.map((beneficiario) => (
-              <tr className="w-full h-full text-center" key={beneficiario.id}>
+              <tr className="w-full h-full text-center border-b border-gray-700" key={beneficiario.id}>
                 <td className="w-1/12 h-full">{beneficiario.name}</td>
                 <td className="w-1/12 h-full">{beneficiario.dni}</td>
                 <td className="w-1/12 h-full">{beneficiario.birth}</td>
