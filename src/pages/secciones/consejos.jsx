@@ -20,7 +20,7 @@ function Consejos() {
   };
 
   useEffect(() => {
-    fetchBD(setConsejos, "https://scout-server-production-dev-dspd.3.us-1.fl0.io/advices");
+    fetchBD(setConsejos, "https://scout-server.onrender.com/advices");
   }, []);
 
   useEffect(() => {

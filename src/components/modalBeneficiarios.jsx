@@ -106,13 +106,13 @@ function ModalBeneficiarios({ isOpen, toClose, seleccionada, beneficiarios }) {
 
     if (beneficiario.id) {
       updateBD(
-        `https://scout-server-production-dev-dspd.3.us-1.fl0.io/beneficiaries/${beneficiario.id}`,
+        `https://scout-server.onrender.com/beneficiaries/${beneficiario.id}`,
         beneficiario
       );
       toClose(false);
       window.location.reload();
     } else {
-      postBD(beneficiario, "https://scout-server-production-dev-dspd.3.us-1.fl0.io/beneficiaries");
+      postBD(beneficiario, "https://scout-server.onrender.com/beneficiaries");
       toClose(false);
       window.location.reload();
     }

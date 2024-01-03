@@ -12,21 +12,21 @@ function Beneficiarios() {
   const [seleccionada, setSeleccionada] = useState(null);
 
   useEffect(() => {
-    fetchBD(setBeneficiarios, "https://scout-server-production-dev-dspd.3.us-1.fl0.io/beneficiaries");
+    fetchBD(setBeneficiarios, "https://scout-server.onrender.com/beneficiaries");
   }, []);
 
-  console.log(beneficiarios);
+
 
   return (
     <main>
       <div
-        className={`w-screen min-h-screen flex flex-col pt-4 pb-6 px-16 gap-4 mdn:px-0 mdn:pt-0 overflow-x-hidden dark:bg-custon-black `}
+        className={`w-screen min-h-screen flex flex-col pt-4 px-16 gap-4 mdn:px-0 mdn:pt-0 overflow-x-hidden dark:bg-custon-black lgn:px-4`}
       >
         <Navbar />
         <div
           className={`w-full h-full ${
             modalOpen ? "blur" : ""
-          } flex flex-col gap-4`}
+          } flex flex-col gap-4 `}
         >
           <h1 className="text-3xl text-center dark:text-white">
             Beneficiarios

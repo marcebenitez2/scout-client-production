@@ -24,7 +24,7 @@ function Login() {
       };
 
       const response = await fetch(
-        "https://scout-server-production-dev-dspd.3.us-1.fl0.io/login",
+        "https://scout-server.onrender.com/login",
         {
           method: "POST",
           headers: {
@@ -55,7 +55,7 @@ function Login() {
   };
 
   return (
-    <main className="max-h-screen flex items-center justify-center dark:bg-custon-black">
+    <main className="max-h-screen h-full flex items-center justify-center dark:bg-custon-black">
       <ChangeTheme />
       <form className="w-2/5 bg-custon-red rounded-2xl gap-4 flex flex-col items-center py-9 px-28 justify-between 2xln:px-20 xln:px-14 lgn:px-5 mdn:w-3/4 smn:w-11/12 smn:h-3/5">
         <h1 className="text-5xl font-bold text-white mdn:text-6xl">Login</h1>

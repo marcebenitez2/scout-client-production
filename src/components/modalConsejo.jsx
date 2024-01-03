@@ -48,7 +48,7 @@ function ModalConsejo({ isOpen, toClose, seleccionado, setSeleccionado }) {
             rama: rama,
             archivo: url,
           };
-          updateBD(`https://scout-server-production-dev-dspd.3.us-1.fl0.io/advices/${seleccionado.id}`, item);
+          updateBD(`https://scout-server.onrender.com/advices/${seleccionado.id}`, item);
           toClose(false);
           setSeleccionado(null);
           window.location.reload();
@@ -63,7 +63,7 @@ function ModalConsejo({ isOpen, toClose, seleccionado, setSeleccionado }) {
           lugar: lugar,
           rama: rama,
         };
-        updateBD(`https://scout-server-production-dev-dspd.3.us-1.fl0.io/advices/${seleccionado.id}`, item);
+        updateBD(`https://scout-server.onrender.com/advices/${seleccionado.id}`, item);
         toClose(false);
         setSeleccionado(null);
 
@@ -96,7 +96,7 @@ function ModalConsejo({ isOpen, toClose, seleccionado, setSeleccionado }) {
           lugar: lugar,
           rama: rama,
         };
-        postBD(item, "https://scout-server-production-dev-dspd.3.us-1.fl0.io/advices");
+        postBD(item, "https://scout-server.onrender.com/advices");
         toClose(false);
         setSeleccionado(null);
         window.location.reload();

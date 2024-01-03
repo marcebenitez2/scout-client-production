@@ -74,11 +74,11 @@ function ModalCalendario({
     }
 
     if (evento.id) {
-      updateBD(`https://scout-server-production-dev-dspd.3.us-1.fl0.io/calendary/${evento.id}`, evento);
+      updateBD(`https://scout-server.onrender.com/calendary/${evento.id}`, evento);
       toClose(false);
       window.location.reload();
     } else {
-      postBD(evento, "https://scout-server-production-dev-dspd.3.us-1.fl0.io/calendary");
+      postBD(evento, "https://scout-server.onrender.com/calendary");
       toClose(false);
       window.location.reload();
     }
@@ -87,7 +87,7 @@ function ModalCalendario({
   const eliminarEvento = (e) => {
     e.preventDefault();
     const id = eventoSeleccionado.id;
-    deleteDB(`https://scout-server-production-dev-dspd.3.us-1.fl0.io/calendary/${id}`);
+    deleteDB(`https://scout-server.onrender.com/calendary/${id}`);
     toClose(false);
     window.location.reload();
   };

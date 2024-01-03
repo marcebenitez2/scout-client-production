@@ -76,6 +76,12 @@ function Tabla({ beneficiarios, setModalOpen, setSeleccionada }) {
         className="dark:bg-custon-black border px-4 py-2 rounded-xl bg-white border-black dark:border-white"
         onChange={(e) => filtradoPorNombre(e.target.value)}
       />
+      <button
+        className="hidden lgn:block h-12 bg-custon-red font-semibold"
+        onClick={() => agregarBeneficiario()}
+      >
+        Agregar nuevo
+      </button>
       <div className="table-wrapper overflow-auto max-h-custom">
         <table className="w-full h-full">
           <thead className="w-full h-full">
@@ -145,7 +151,7 @@ function Tabla({ beneficiarios, setModalOpen, setSeleccionada }) {
         </table>
       </div>
       <button
-        className="bg-custon-red w-1/6 h-10 rounded-xl m-auto text-white"
+        className="bg-custon-red px-2 h-10 rounded-xl m-auto text-white lgn:hidden"
         onClick={() => agregarBeneficiario()}
       >
         Agregar nuevo

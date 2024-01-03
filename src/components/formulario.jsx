@@ -41,7 +41,7 @@ function Formulario() {
 
     postBD(
       data,
-      "https://scout-server-production-dev-dspd.3.us-1.fl0.io/notifications"
+      "https://scout-server.onrender.com/notifications"
     );
     console.log(data);
     // window.location.reload();

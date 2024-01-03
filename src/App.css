@@ -5,17 +5,13 @@
   font-family: "Quicksand", sans-serif;
 }
 
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
   margin: 0;
   padding: 0;
 }
-
-main {
-  height: 100%;
-  width: 100%;
-}
-
 
 ::-webkit-scrollbar {
   width: 10px; /* Ancho de la barra de desplazamiento */
@@ -29,7 +25,7 @@ main {
 
 /* Cambiar el color del fondo de la barra de desplazamiento (opcional) */
 ::-webkit-scrollbar-track {
-  background-color: white; /* Color del fondo */
+  background-color: #1a1a1a; /* Color del fondo */
 }
 
 .table-wrapper {
@@ -38,9 +34,8 @@ main {
 }
 
 .max-h-custom {
- max-height: 37rem;
+  max-height: 39rem;
 }
-
 
 /* Toogle */
 
@@ -191,5 +186,3 @@ main {
     transform: rotate(360deg);
   }
 }
-
-

@@ -21,7 +21,7 @@ function Menu() {
   const [seleccionada, setSeleccionada] = useState(null);
 
   useEffect(() => {
-    fetchBD(setNotificaciones, "https://scout-server-production-dev-dspd.3.us-1.fl0.io/notifications");
+    fetchBD(setNotificaciones, "https://scout-server.onrender.com/notifications");
   }, []);
 
   useEffect(() => {

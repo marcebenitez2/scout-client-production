@@ -14,7 +14,7 @@ function Inventario() {
   const [deleteModalOpen, setDeleteModalOpen] = useState(false);
 
   useEffect(() => {
-    fetchBD(setInventario, "https://scout-server-production-dev-dspd.3.us-1.fl0.io/inventory");
+    fetchBD(setInventario, "https://scout-server.onrender.com/inventory");
   }, []);
 
   return (

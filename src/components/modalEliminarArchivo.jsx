@@ -18,10 +18,10 @@ function ModalEliminarArchivo({ isOpen, toClose, archivos }) {
 
   function handleGuardarCambios() {
     if (aEliminar.length === 1) {
-      deleteDB(`https://scout-server-production-dev-dspd.3.us-1.fl0.io/plans/${aEliminar[0]}`);
+      deleteDB(`https://scout-server.onrender.com/plans/${aEliminar[0]}`);
     } else {
       aEliminar.forEach((id) => {
-        deleteDB(`https://scout-server-production-dev-dspd.3.us-1.fl0.io/plans/${id}`);
+        deleteDB(`https://scout-server.onrender.com/plans/${id}`);
       });
     }
     setaEliminar([]);

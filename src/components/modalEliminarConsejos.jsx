@@ -18,10 +18,10 @@ function ModalEliminarConsejos({ isOpen, toClose, consejos }) {
 
   const handleGuardarCambios = () => {
     if (aEliminar.length === 1) {
-      deleteDB(`https://scout-server-production-dev-dspd.3.us-1.fl0.io/advices/${aEliminar[0]}`);
+      deleteDB(`https://scout-server.onrender.com/advices/${aEliminar[0]}`);
     } else {
       aEliminar.forEach((id) => {
-        deleteDB(`https://scout-server-production-dev-dspd.3.us-1.fl0.io/advices/${id}`);
+        deleteDB(`https://scout-server.onrender.com/advices/${id}`);
       });
     }
     setaEliminar([]);

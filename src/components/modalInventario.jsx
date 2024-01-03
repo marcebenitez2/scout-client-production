@@ -44,12 +44,12 @@ function ModalInventario({ isOpen, toClose, seleccionada, inventario }) {
     };
 
     if (item.id) {
-      updateBD(`https://scout-server-production-dev-dspd.3.us-1.fl0.io/inventory/${item.id}`, item);
+      updateBD(`https://scout-server.onrender.com/inventory/${item.id}`, item);
       toClose(false);
       window.location.reload();
     } else {
       // Aca para agregar
-      postBD(item, "https://scout-server-production-dev-dspd.3.us-1.fl0.io/inventory");
+      postBD(item, "https://scout-server.onrender.com/inventory");
       toClose(false);
       window.location.reload();
     }
