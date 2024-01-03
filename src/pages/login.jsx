@@ -23,13 +23,16 @@ function Login() {
         password: contra,
       };
 
-      const response = await fetch("https://scout-server-production-dev-dspd.3.us-1.fl0.io/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      const response = await fetch(
+        "https://scout-server-production-dev-dspd.3.us-1.fl0.io/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
       if (!response.ok) {
         throw new Error("Error al iniciar sesión");
       }
@@ -52,31 +55,30 @@ function Login() {
   };
 
   return (
-    <main className="w-screen h-screen flex items-center justify-center dark:bg-custon-black">
+    <main className="max-h-screen flex items-center justify-center dark:bg-custon-black">
       <ChangeTheme />
-      <form className="w-2/5 bg-custon-red rounded-2xl gap-4 flex flex-col items-center py-9 px-28 justify-between 2xln:px-20 xln:px-14 lgn:px-7 mdn:w-3/4 smn:w-5/6 smn:h-3/5">
-        <h1 className="text-5xl font-bold text-white">Login</h1>
-        <div className="flex flex-col w-full gap-2">
-          <div className="flex flex-col w-full">
-            <label className="text-white text-xl font-semibold">
-             Correo electronico:
-            </label>
+      <form className="w-2/5 bg-custon-red rounded-2xl gap-4 flex flex-col items-center py-9 px-28 justify-between 2xln:px-20 xln:px-14 lgn:px-5 mdn:w-3/4 smn:w-11/12 smn:h-3/5">
+        <h1 className="text-5xl font-bold text-white mdn:text-6xl">Login</h1>
+        <div className="flex flex-col items-center justify-center w-full gap-2 font-semibold text-2xl">
+          <label className="text-white w-full">
+            Correo electronico:
             <input
-              className="h-10 dark:bg-custon-black dark:text-white px-4 font-semibold"
+              className="h-10 dark:bg-custon-black dark:text-white px-4 w-full text-xl"
               onChange={(e) => setUsuario(e.target.value)}
             />
-          </div>
-          <div className="flex flex-col w-full font-semibold">
-            <label className="text-white text-xl">Contraseña:</label>
+          </label>
+
+          <label className="text-white w-full">
+            Contraseña:
             <input
               type="password"
-              className="h-10 dark:bg-custon-black dark:text-white px-4 font-semibold"
+              className="h-10 dark:bg-custon-black dark:text-white px-4 w-full text-xl"
               onChange={(e) => setContra(e.target.value)}
             />
-          </div>
+          </label>
         </div>
         <button
-          className="w-1/2 h-12 bg-white text-xl font-semibold text-black dark:bg-custon-black dark:text-white"
+          className="w-1/2 h-12 bg-white text-xl font-semibold text-black dark:bg-custon-black dark:text-white smn:w-3/4 smn:h-16"
           onClick={(e) => iniciarSesion(e)}
         >
           Iniciar sesion

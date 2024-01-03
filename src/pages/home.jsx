@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <main className="w-screen h-screen overflow-hidden">
+    <div className="h-full max-h-screen overflow-y-hidden">
       <InfoNav />
       <section
-        className="w-full h-full bg-cover bg-center bg-no-repeat"
+        className="w-full h-full bg-cover bg-center bg-no-repeat overflow-y-hidden"
         style={{ backgroundImage: `url(${background})` }}
       >
-        <div className="w-full h-full bg-black bg-opacity-50 flex flex-col justify-center items-center">
+        <div className="w-full h-full bg-black bg-opacity-50 flex flex-col justify-center items-center overflow-y-hidden">
           <h1 className="text-white text-5xl tracking-tighter smn:text-2xl">
             Grupo Scout
           </h1>
@@ -25,7 +25,7 @@ function Home() {
           </Link>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
 

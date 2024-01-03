@@ -31,39 +31,41 @@ function App() {
         setIdUsuario,
       }}
     >
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/formulario" element={<Consulta />} />
-          <Route path="/login" element={auth ? <Menu /> : <Login />} />
-          <Route path="/menu" element={auth ? <Menu /> : <Login />} />
-          <Route
-            path="/menu/beneficiarios"
-            element={auth ? <Beneficiarios /> : <Login />}
-          />
-          <Route
-            path="/menu/inventario"
-            element={auth ? <Inventario /> : <Login />}
-          />
-          <Route
-            path="/menu/calendario"
-            element={auth ? <Calendario /> : <Login />}
-          />
-          <Route
-            path="/menu/planificaciones"
-            element={auth ? <Planificaciones /> : <Login />}
-          />
-          <Route
-            path="/menu/consejos"
-            element={auth ? <Consejos /> : <Login />}
-          />
-          <Route
-            path="/menu/usuarios"
-            element={auth ? <Usuarios /> : <Login />}
-          />
-          <Route path="*" element={<Error />} />
-        </Routes>
-      </Router>
+      <main>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/formulario" element={<Consulta />} />
+            <Route path="/login" element={auth ? <Menu /> : <Login />} />
+            <Route path="/menu" element={auth ? <Menu /> : <Login />} />
+            <Route
+              path="/menu/beneficiarios"
+              element={auth ? <Beneficiarios /> : <Login />}
+            />
+            <Route
+              path="/menu/inventario"
+              element={auth ? <Inventario /> : <Login />}
+            />
+            <Route
+              path="/menu/calendario"
+              element={auth ? <Calendario /> : <Login />}
+            />
+            <Route
+              path="/menu/planificaciones"
+              element={auth ? <Planificaciones /> : <Login />}
+            />
+            <Route
+              path="/menu/consejos"
+              element={auth ? <Consejos /> : <Login />}
+            />
+            <Route
+              path="/menu/usuarios"
+              element={auth ? <Usuarios /> : <Login />}
+            />
+            <Route path="*" element={<Error />} />
+          </Routes>
+        </Router>
+      </main>
     </UserContext.Provider>
   );
 }

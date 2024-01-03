@@ -4,9 +4,9 @@ import InfoNav from '../components/infoNav'
 
 function Consulta() {
     return (
-        <main className="w-screen h-screen bg-custon-white bg-gradient-to-t from-red-200 to-red-600">
+        <main className="max-h-screen h-full overflow-y-hidden bg-custon-white bg-gradient-to-t from-red-200 to-red-600">
         <InfoNav />
-        <section className="pt-20 w-full flex flex-col px-10 gap-12 items-center">
+        <section className="pt-20 w-full flex flex-col px-10 gap-12 items-center lgn:px-2">
           <div className="font-semibold text-white text-center">
             <h2 className="text-5xl">Grupo scout</h2>
             <h1 className="text-7xl">San Miguel de Arcangel</h1>

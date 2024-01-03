@@ -11,7 +11,7 @@ function Formulario() {
 
   const enviar = (e) => {
     e.preventDefault();
-    
+
     if (
       !nombreFormulario ||
       !telefonoFormulario ||
@@ -38,14 +38,17 @@ function Formulario() {
       correo: correoFormulario,
       mensaje: mensajeFormulario,
     };
-  
-    postBD(data, "https://scout-server-production-dev-dspd.3.us-1.fl0.io/notifications");
+
+    postBD(
+      data,
+      "https://scout-server-production-dev-dspd.3.us-1.fl0.io/notifications"
+    );
     console.log(data);
     // window.location.reload();
   };
 
   return (
-    <form className="flex flex-col w-1/2 text-white gap-6">
+    <form className="flex flex-col w-1/2 text-white gap-6 lgn:w-full lgn: px-2">
       <div>
         <div className="flex flex-col">
           <label className="text-2xl font-semibold">Nombre y Apellido</label>
@@ -88,7 +91,7 @@ function Formulario() {
       >
         Enviar
       </button>
-      <ToastContainer/>
+      <ToastContainer />
     </form>
   );
 }
