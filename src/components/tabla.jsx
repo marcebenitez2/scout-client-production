@@ -82,7 +82,7 @@ function Tabla({ beneficiarios, setModalOpen, setSeleccionada }) {
       >
         Agregar nuevo
       </button>
-      <div className="table-wrapper overflow-auto max-h-custom">
+      <div className="table-wrapper overflow-y-auto max-h-custom">
         <table className="w-full h-full">
           <thead className="w-full h-full">
             <tr className="w-full h-full text-custon-red font-semibold">
