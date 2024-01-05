@@ -8,14 +8,15 @@ function ModalInventario({ isOpen, toClose, seleccionada, inventario }) {
   if (!isOpen) {
     return null;
   }
+
   const [id, setId] = useState(seleccionada ? seleccionada.id : null);
-  const [nombre, setNombre] = useState(seleccionada ? seleccionada.name : null);
-  const [stock, setStock] = useState(seleccionada ? seleccionada.stock : null);
+  const [nombre, setNombre] = useState(seleccionada ? seleccionada.name : "");
+  const [stock, setStock] = useState(seleccionada ? seleccionada.stock : 0);
   const [disponible, setDisponible] = useState(
-    seleccionada ? seleccionada.available : null
+    seleccionada ? seleccionada.available : 0
   );
   const [descripcion, setDescripcion] = useState(
-    seleccionada ? seleccionada.description : null
+    seleccionada ? seleccionada.description : ""
   );
   const [rama, setRama] = useState(
     seleccionada ? seleccionada.branch : "Todos"
@@ -29,27 +30,30 @@ function ModalInventario({ isOpen, toClose, seleccionada, inventario }) {
       return;
     }
 
-    if (disponible > stock) {
+    const parsedStock = parseInt(stock, 10); // Convert stock to number
+    const parsedDisponible = parseInt(disponible, 10); // Convert disponible to number
+
+    if (parsedStock < parsedDisponible) {
       toast.error("El disponible no puede ser mayor al stock");
+      console.log(parsedDisponible, parsedStock);
       return;
     }
 
     const item = {
       id: id,
       nombre: nombre,
-      stock: stock,
-      disponible: disponible,
+      stock: parsedStock,
+      disponible: parsedDisponible,
       descripcion: descripcion,
       rama: rama,
     };
 
     if (item.id) {
-      updateBD(`https://scout-server.onrender.com/inventory/${item.id}`, item);
+      updateBD(`http://localhost:5000/inventory/${item.id}`, item);
       toClose(false);
       window.location.reload();
     } else {
-      // Aca para agregar
-      postBD(item, "https://scout-server.onrender.com/inventory");
+      postBD(item, "http://localhost:5000/inventory");
       toClose(false);
       window.location.reload();
     }
