@@ -49,11 +49,11 @@ function ModalInventario({ isOpen, toClose, seleccionada, inventario }) {
     };
 
     if (item.id) {
-      updateBD(`http://localhost:5000/inventory/${item.id}`, item);
+      updateBD(`https://scout-server.onrender.com/inventory/${item.id}`, item);
       toClose(false);
       window.location.reload();
     } else {
-      postBD(item, "http://localhost:5000/inventory");
+      postBD(item, "https://scout-server.onrender.com/inventory");
       toClose(false);
       window.location.reload();
     }
