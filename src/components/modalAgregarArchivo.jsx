@@ -34,9 +34,12 @@ function ModalAgregarArchivo({ isOpen, toClose }) {
           archivo: url,
         };
 
-        postBD(item, "https://scout-server.onrender.com/plans");
-        toClose(false);
-        window.location.reload();
+        return postBD(item, "https://scout-server.onrender.com/plans").then(
+          () => {
+            toClose(false);
+            window.location.reload();
+          }
+        );
       })
       .catch((error) => {
         console.error("Error al enviar a Firebase Storage:", error);

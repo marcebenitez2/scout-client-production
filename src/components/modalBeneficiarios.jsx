@@ -36,7 +36,7 @@ function ModalBeneficiarios({ isOpen, toClose, seleccionada, beneficiarios }) {
     seleccionada ? seleccionada.active : false
   );
 
-  const guardarCambios = (e) => {
+  const guardarCambios = async (e) => {
     e.preventDefault();
     console.log(
       id,
@@ -103,22 +103,22 @@ function ModalBeneficiarios({ isOpen, toClose, seleccionada, beneficiarios }) {
       activo,
     };
 
-
     if (beneficiario.id) {
-      updateBD(
+      await updateBD(
         `https://scout-server.onrender.com/beneficiaries/${beneficiario.id}`,
         beneficiario
       );
       toClose(false);
       window.location.reload();
     } else {
-      postBD(beneficiario, "https://scout-server.onrender.com/beneficiaries");
+      await postBD(
+        beneficiario,
+        "https://scout-server.onrender.com/beneficiaries"
+      );
       toClose(false);
       window.location.reload();
     }
   };
-
-
 
   return (
     <main>

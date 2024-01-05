@@ -16,9 +16,9 @@ function ModalEliminarArchivo({ isOpen, toClose, archivos }) {
     }
   }
 
-  function handleGuardarCambios() {
+  async function handleGuardarCambios() {
     if (aEliminar.length === 1) {
-      deleteDB(`https://scout-server.onrender.com/plans/${aEliminar[0]}`);
+      await deleteDB(`https://scout-server.onrender.com/plans/${aEliminar[0]}`);
     } else {
       aEliminar.forEach((id) => {
         deleteDB(`https://scout-server.onrender.com/plans/${id}`);

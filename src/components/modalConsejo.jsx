@@ -48,10 +48,14 @@ function ModalConsejo({ isOpen, toClose, seleccionado, setSeleccionado }) {
             rama: rama,
             archivo: url,
           };
-          updateBD(`https://scout-server.onrender.com/advices/${seleccionado.id}`, item);
-          toClose(false);
-          setSeleccionado(null);
-          window.location.reload();
+          updateBD(
+            `https://scout-server.onrender.com/advices/${seleccionado.id}`,
+            item
+          ).then(() => {
+            toClose(false);
+            setSeleccionado(null);
+            window.location.reload();
+          });
         });
       } else {
         // Aca seria para actualizar un dato pero sin archivo
@@ -63,11 +67,14 @@ function ModalConsejo({ isOpen, toClose, seleccionado, setSeleccionado }) {
           lugar: lugar,
           rama: rama,
         };
-        updateBD(`https://scout-server.onrender.com/advices/${seleccionado.id}`, item);
-        toClose(false);
-        setSeleccionado(null);
-
-        window.location.reload();
+        updateBD(
+          `https://scout-server.onrender.com/advices/${seleccionado.id}`,
+          item
+        ).then(() => {
+          toClose(false);
+          setSeleccionado(null);
+          window.location.reload();
+        });
       }
     } else {
       // Aca seria para agregar un dato con archivo
@@ -81,11 +88,11 @@ function ModalConsejo({ isOpen, toClose, seleccionado, setSeleccionado }) {
             rama: rama,
             archivo: url,
           };
-          postBD(item, "http://localhost/addadvice.php");
-          toClose(false);
-          setSeleccionado(null);
-
-          window.location.reload();
+          postBD(item, "http://localhost/addadvice.php").then(() => {
+            toClose(false);
+            setSeleccionado(null);
+            window.location.reload();
+          });
         });
       } else {
         // Aca seria para agregar un dato pero sin archivo
@@ -96,10 +103,11 @@ function ModalConsejo({ isOpen, toClose, seleccionado, setSeleccionado }) {
           lugar: lugar,
           rama: rama,
         };
-        postBD(item, "https://scout-server.onrender.com/advices");
-        toClose(false);
-        setSeleccionado(null);
-        window.location.reload();
+        postBD(item, "https://scout-server.onrender.com/advices").then(() => {
+          toClose(false);
+          setSeleccionado(null);
+          window.location.reload();
+        });
       }
     }
   };

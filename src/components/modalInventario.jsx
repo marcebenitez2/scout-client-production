@@ -22,7 +22,7 @@ function ModalInventario({ isOpen, toClose, seleccionada, inventario }) {
     seleccionada ? seleccionada.branch : "Todos"
   );
 
-  const guardarCambios = (e) => {
+  const guardarCambios = async (e) => {
     e.preventDefault();
 
     if (!nombre || !stock || !disponible || !descripcion || !rama) {
@@ -49,11 +49,14 @@ function ModalInventario({ isOpen, toClose, seleccionada, inventario }) {
     };
 
     if (item.id) {
-      updateBD(`https://scout-server.onrender.com/inventory/${item.id}`, item);
+      await updateBD(
+        `https://scout-server.onrender.com/inventory/${item.id}`,
+        item
+      );
       toClose(false);
       window.location.reload();
     } else {
-      postBD(item, "https://scout-server.onrender.com/inventory");
+      await postBD(item, "https://scout-server.onrender.com/inventory");
       toClose(false);
       window.location.reload();
     }

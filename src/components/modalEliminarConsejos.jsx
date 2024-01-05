@@ -16,9 +16,11 @@ function ModalEliminarConsejos({ isOpen, toClose, consejos }) {
     }
   };
 
-  const handleGuardarCambios = () => {
+  const handleGuardarCambios = async () => {
     if (aEliminar.length === 1) {
-      deleteDB(`https://scout-server.onrender.com/advices/${aEliminar[0]}`);
+      await deleteDB(
+        `https://scout-server.onrender.com/advices/${aEliminar[0]}`
+      );
     } else {
       aEliminar.forEach((id) => {
         deleteDB(`https://scout-server.onrender.com/advices/${id}`);

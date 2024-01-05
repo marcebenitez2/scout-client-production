@@ -9,7 +9,7 @@ function Formulario() {
   const [correoFormulario, setcorreoFormulario] = useState("");
   const [mensajeFormulario, setmensajeFormulario] = useState("");
 
-  const enviar = (e) => {
+  const enviar = async (e) => {
     e.preventDefault();
 
     if (
@@ -39,12 +39,9 @@ function Formulario() {
       mensaje: mensajeFormulario,
     };
 
-    postBD(
-      data,
-      "https://scout-server.onrender.com/notifications"
-    );
+    await postBD(data, "https://scout-server.onrender.com/notifications");
     console.log(data);
-    // window.location.reload();
+    window.location.reload();
   };
 
   return (

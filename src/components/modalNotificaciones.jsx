@@ -2,8 +2,10 @@ import React from "react";
 import { updateBD } from "../services/updateBD";
 
 function ModalNotificaciones({ isOpen, toClose, seleccionada, texto }) {
-  const enviarCambios = () => {
-    updateBD(`https://scout-server.onrender.com/notifications/${seleccionada.id}`);
+  const enviarCambios = async () => {
+    await updateBD(
+      `https://scout-server.onrender.com/notifications/${seleccionada.id}`
+    );
     window.location.reload();
   };
 

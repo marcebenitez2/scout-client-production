@@ -47,7 +47,7 @@ function ModalCalendario({
     eventoSeleccionado ? eventoSeleccionado.description : ""
   );
 
-  const guardarCambios = (e) => {
+  const guardarCambios = async (e) => {
     e.preventDefault();
     const evento = {
       id: id,
@@ -74,20 +74,23 @@ function ModalCalendario({
     }
 
     if (evento.id) {
-      updateBD(`https://scout-server.onrender.com/calendary/${evento.id}`, evento);
+      await updateBD(
+        `https://scout-server.onrender.com/calendary/${evento.id}`,
+        evento
+      );
       toClose(false);
       window.location.reload();
     } else {
-      postBD(evento, "https://scout-server.onrender.com/calendary");
+      await postBD(evento, "https://scout-server.onrender.com/calendary");
       toClose(false);
       window.location.reload();
     }
   };
 
-  const eliminarEvento = (e) => {
+  const eliminarEvento = async (e) => {
     e.preventDefault();
     const id = eventoSeleccionado.id;
-    deleteDB(`https://scout-server.onrender.com/calendary/${id}`);
+    await deleteDB(`https://scout-server.onrender.com/calendary/${id}`);
     toClose(false);
     window.location.reload();
   };
